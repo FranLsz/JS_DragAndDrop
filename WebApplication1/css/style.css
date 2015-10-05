@@ -1,0 +1,12 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+
+}
+
+#destino {
+
+    background-color: grey;
+    width: 600px;
+    height: 600px;
+}
