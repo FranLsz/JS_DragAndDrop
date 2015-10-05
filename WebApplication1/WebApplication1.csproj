@@ -76,9 +76,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css" />
+    <Content Include="imagenes.html" />
     <Content Include="index.html" />
     <Content Include="media\logo_bootstrap.jpg" />
     <Content Include="scripts\app.js" />
+    <Content Include="scripts\draganddrop.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,23 +1,16 @@
-﻿function drag(evt) {
-    evt.dataTransfer.setData("objeto", evt.target.id);
+﻿if (sessionStorage.getItem("nombre")) {
+    location.replace("imagenes.html");
 }
 
-function allowDrop(evt) {
-    evt.preventDefault();
+function login() {
+
+    if (document.getElementById("txtNom").value === "") {
+        alert("Nombre vacio");
+        return;
+    }
+
+    sessionStorage.setItem("nombre", document.getElementById("txtNom").value);
+    location.replace("imagenes.html");
 }
 
-function drop(evt) {
-    evt.preventDefault();
-    var data = evt.dataTransfer.getData("objeto");
-    document.getElementById("destino").appendChild(document.getElementById(data));
-}
-
-var imgs = document.querySelectorAll("img");
-var destino = document.querySelector("#destino");
-
-for (var i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener("dragstart", drag);
-}
-
-destino.addEventListener("dragover", allowDrop);
-destino.addEventListener("drop", drop);
+document.getElementById("btnOk").addEventListener("click", login);
